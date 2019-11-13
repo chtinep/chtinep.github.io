@@ -1,24 +1,64 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>박철현</title>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script>
+    <meta charset="UTF-8">
+    <title>박철현</title>
     
-  </script>
-  <style>
-    body {background:black; color:white;}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     
-  </style>
-  
+    <script>
+        $(document).ready(function(){
+            
+            $(".p1left").mouseover(function(){
+               $(".p1left h1").stop().animate({"font-size":"100pt"},1000) 
+            });
+            
+            $(".p1left").mouseleave(function(){
+               $(".p1left h1").stop().animate({"font-size":"35pt"},1000) 
+            });
+            
+             $(".p1right").mouseover(function(){
+               $(".p1right span").stop().animate({"bottom":"50%"},1000) 
+            });
+            
+            $(".p1right").mouseleave(function(){
+               $(".p1right span").stop().animate({"bottom":"5%"},1000) 
+            });
+        });
+        
+    </script>
 
+    <style>
+        body {margin:0; padding:0; text-decoration:none;}
+        
+        .part1 {width:100%; height:1000px; background:black;}
+        
+        .p1left {width:50%; height:1000px; background:yellow; float:left; position:relative;}
+        .p1left h1 {text-align:center; font-size:35pt; font-weight:300; position: absolute; left:35%; top:35%;}
+        
+        .p1right {width:50%; height:1000px; background:green; float:right; position:relative;}
+        .p1right span {font-size:55pt; color:white; position: absolute; bottom:5%; left:5%;}
+        .p1right:after {display:block; content:""; float:none;}
+        
+        /* ----------------------------------- */
+        
+        .part2 {width:100%; height:700px; background:gray;}
+        
+    </style>
 </head>
 
 <body>
-  <h1>Hellow World</h1>
-  <h2>this is github test!!</h2>
- 
+    <div class="part1">
+        <div class="p1left">
+            <h1>글자 삽입</h1>
+        </div>
+        <div class="p1right">
+            <span>Font test</span>
+        </div>
+    </div>
+    
+    <div class="part2">
+        
+    </div>
 </body>
 </html>
