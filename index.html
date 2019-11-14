@@ -7,58 +7,124 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     
     <script>
-        $(document).ready(function(){
-            
-            $(".p1left").mouseover(function(){
-               $(".p1left h1").stop().animate({"font-size":"100pt"},1000) 
-            });
-            
-            $(".p1left").mouseleave(function(){
-               $(".p1left h1").stop().animate({"font-size":"35pt"},1000) 
-            });
-            
-             $(".p1right").mouseover(function(){
-               $(".p1right span").stop().animate({"bottom":"50%"},1000) 
-            });
-            
-            $(".p1right").mouseleave(function(){
-               $(".p1right span").stop().animate({"bottom":"5%"},1000) 
-            });
-        });
-        
+ 
     </script>
 
     <style>
         body {margin:0; padding:0; text-decoration:none;}
         
-        .part1 {width:100%; height:1000px; background:black;}
+         /* ----------------------------------- */
+        .topbar {width:100%; height:200px; background:white; position:fixed; z-index:999; opacity:0.5;}
+         /* ----------------------------------- */
         
-        .p1left {width:50%; height:1000px; background:yellow; float:left; position:relative;}
-        .p1left h1 {text-align:center; font-size:35pt; font-weight:300; position: absolute; left:35%; top:35%;}
+        .part1 {width:100%; height:970px; background:gray;}
         
-        .p1right {width:50%; height:1000px; background:green; float:right; position:relative;}
-        .p1right span {font-size:55pt; color:white; position: absolute; bottom:5%; left:5%;}
-        .p1right:after {display:block; content:""; float:none;}
         
         /* ----------------------------------- */
         
-        .part2 {width:100%; height:700px; background:gray;}
+        .part2 {width:100%; height:970px; background:green;}
         
+        
+        /* ----------------------------------- */
+        
+        .part3open {width:100%; height:150px; background:black;}
+        
+         /* ----------------------------------- */
+        
+        .part3 {width:100%; height:735px; background:white;}
+        .part3left {width:50%; height:100%; background:green; float:left;}
+        .part3right {width:50%; height:100%; background:yellow; float:right;}
+        .part3right:after {display:block; content: ""; float:none;}
+        
+         /* ----------------------------------- */
+        
+        .part4 {width:100%; height:865px; background:white;}
+        
+         /* ----------------------------------- */
+        
+        .part5 {width:100%; height:970px; background:orange;}
+        
+         /* ----------------------------------- */
+        .part6 {width:100%; height:1000px; background:#123123;}
+        
+         /* ----------------------------------- */
+        .part7open {width:100%; height:150px; background:#732b2e;}
+        
+         /* ----------------------------------- */
+        .part7 {width:100%; height:940px; background:snow;}
+        
+         /* ----------------------------------- */
+        .part8 {width:100%; height:1030px; background:gray;}
+        
+         /* ----------------------------------- */
+        .part9open {width:100%; height:150px; background:#0071bb;}
+        
+         /* ----------------------------------- */
+        .part9 {width:100%; height:925px; background:purple;}
+        
+         /* ----------------------------------- */
+        .part10 {width:100%; height:735px; background:black;}
+        .part10left {width:50%; height:100%; background:orange; float:left;}
+        .part10right {width:50%; height:100%; background:skyblue; float:right;}
+        .part10right:after {content:""; display:block; float:none;}
+        
+         /* ----------------------------------- */
+        .part11 {width:100%; height:895px; background:yellow;}
+        
+         /* ----------------------------------- */
+        .part12 {width:100%; height:735px; background:black;}
+        .part12left {width:50%; height:100%; background:orange; float:left;}
+        .part12right {width:50%; height:100%; background:skyblue; float:right;}
+        .part12right:after {content:""; display:block; float:none;}
+         /* ----------------------------------- */
     </style>
 </head>
 
 <body>
+   
+   <div class="topbar"></div>
+   
     <div class="part1">
-        <div class="p1left">
-            <h1>글자 삽입</h1>
-        </div>
-        <div class="p1right">
-            <span>Font test</span>
-        </div>
+       
     </div>
     
     <div class="part2">
         
+    </div>
+    
+    <div class="part3open"></div>
+    
+    <div class="part3">
+        <div class="part3left"></div>
+        <div class="part3right"></div>
+    </div>
+    
+    <div class="part4"></div>
+    
+    <div class="part5"></div>
+    
+    <div class="part6"></div>
+    
+    <div class="part7open"></div>
+    
+    <div class="part7"></div>
+    
+    <div class="part8"></div>
+    
+    <div class="part9open"></div>
+    
+    <div class="part9"></div>
+    
+    <div class="part10">
+        <div class="part10left"></div>
+        <div class="part10right"></div>
+    </div>
+    
+    <div class="part11"></div>
+    
+    <div class="part12">
+        <div class="part12left"></div>
+        <div class="part12right"></div>
     </div>
 </body>
 </html>
