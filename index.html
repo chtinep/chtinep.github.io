@@ -30,27 +30,31 @@
         .aside ul li {margin-top:15px;}
         /* ----------------------------------- */
         .part1 {width:100%; height:850px; position:relative;}
-        .logo {width:600px; height:500px; position:absolute; background:white; top:20%; left:15%;}
-        .part1text {position:absolute; top:20%; right:10%; border:1px solid white; width:800px; height:500px; text-align: center;}
-        .part1text1 {font-size:72pt; margin-top:15%;}
-        .part1text2 {font-size:50pt;}
+        .logo {width:600px; height:500px; position:absolute; background:url("img/part1/logo.png") no-repeat;; top:20%; left:13%;}
+        .part1text {position:absolute; top:20%; right:10%;  width:800px; height:500px; }
+        .part1text1 {font-size:100pt; margin-top:10%; margin-left:25px;}
+        .part1text2 {font-size:50pt;margin-top:2%;}
          /* ----------------------------------- */
         .part2 {width:100%; height:150px; background:url(img/part2/part2.png)no-repeat; background-size: cover;}
         .part2 h2 {width:100%; height:100%; font-size:48pt;  font-weight:300; text-align:center; line-height:140px;}
          /* ----------------------------------- */
         .part3 {width:100%; height:680px; background:#171c25;}
         .part3in {width:80%; height:100%; margin:0 auto;}
-        .part3inleft {width:50%;height:100%; float:left; background:url("computer-768696_1920.jpg")no-repeat; background-size:cover;}
-        .part3inright {width:50%;height:100%; float:right;}
+        .part3inleft {width:50%;height:80%; float:left; margin-top:75px; background:url("computer-768696_1920.jpg")no-repeat; background-size:cover;}
+        .part3inright {width:50%; height:100%; float:right;  box-sizing: border-box; padding-left:75px; padding-right:50px; padding-top:50px;}
+        .part3title {font-weight: 800; color: gold; font-size:25pt; margin-top:75px;}
+        .part3name {font-weight:500; margin-top:10px; font-size:30pt;}
+        .part3info { font-size:16pt; margin-top:25px; line-height:40px; font-weight: 500;}
         .part3inright:after {content:""; float:none; display:block;}
-        .part3shotcut1 {width:200px; height:45px;  border:1.5px solid red; border-radius:25px; text-align: center; line-height:45px; font-weight:600;}
-        .part3shotcut2 {width:200px; height:45px; border:1.5px solid white; border-radius:25px; text-align: center; line-height:45px; font-weight:600;}
+        .part3shotcut1 {width:200px; height:50px; background-color:crimson; border-radius:25px; text-align: center; line-height:50px; font-weight:300; margin-top:40px; margin-left:150px;}
+        
+        
         /* ----------------------------------- */
         .part4 {width:100%; height:1100px; background:url( img/part4/part4.png)no-repeat center bottom; background-size:cover; position:relative;}
         .part4title {position:absolute; width:100%; text-align: center; height:150px;  font-size:55pt; font-weight: 500; line-height: 150px;}
         .part4ul {width:90%; height:100%;  margin:0 auto; }
         .part4ul li {width:500px; height:700px; float:left; margin-left:52px; margin-top:230px; border-radius: 10px; background:white;overflow:hidden;}
-        .part4ul li:nth-child(1) img {width:500px; height:1500px;}
+        .part4ul li:nth-child(1) {background:url(img/part4/1.jpg)no-repeat center; background-size:cover;  }
         /* ----------------------------------- */
         .part5 {width:100%; height:1200px; position:relative;}
         .part5title {position:absolute; width:100%; text-align:center; height:150px;  font-size:55pt; font-weight:500; line-height:150px; top:0px;}
@@ -60,8 +64,8 @@
         .part5ul li:nth-child(1),.part5ul li:nth-child(2),.part5ul li:nth-child(3) {margin-top:35px;}
         .part5ul li:nth-child(4) {margin-left:50px;}
         
-        .part5ul li:nth-child(1) img {margin:75px;}
-        .part5ul li:nth-child(2) img {width:250px; height:125px; margin:75px;}
+        .part5ul li:nth-child(1) img {width:400px; height:400px;}
+        .part5ul li:nth-child(2) img {width:400px; height:400px;}
         .part5ul li:nth-child(3) img {width:100%; height:100%; }
         
         /* ----------------------------------- */
@@ -69,7 +73,8 @@
         .part6title { width:100%; text-align:center; height:100px;  font-size:35pt; font-weight:500; line-height:100px; }
         .part6ul {width:80%; height:350px; margin:0 auto;  border-top:3px solid white; border-bottom:5px solid white;}
         .part6ul li {float:left; width:400px; height:300px; background:white; margin-left:75px; margin-top:25px;}
-        .part6ul li:nth-child(1) {background:url("img/part6/deer-952744.png")no-repeat center; background-size:cover;}
+        .part6ul li:nth-child(1) {background:url("img/part6/1.png")no-repeat center; background-size:cover;}
+        .part6ul li:nth-child(2) {background:url("img/part6/2.jpg")no-repeat center; background-size:cover;}
         /* ----------------------------------- */
     </style>
     
@@ -115,16 +120,22 @@
        <div class="part3in">
            <div class="part3inleft"></div>
            <div class="part3inright">
-               <p>이름 : 박철현</p>
-               <p>생년월일 : 1997년 02월 03일</p>
-               <p><a href="%EC%9D%B4%EB%A0%A5%EC%84%9C_20191119.pdf">이력서 바로가기(2019-11-19)</a></p>
-               <p>안녕하세요. 이사이트는 박철현의 포토폴리오로 제작된 사이트입니다.</p>
-               <p>현재 사이트는 1920px 1080px 에 최적화 되어있으며 HTML,CSS,JAVASCRIPT를 사용하여 제작하였습니다.</p>
+               <p class="part3title">PORTFOLIO INFO</p>
+               <h1 class="part3name">박철현</h1>
                
-               <p>현재 사이트의 구성으로는 "웹사이트" 제작,디자인,설계와 "상세페이지"제작, 기타 디자인으로 이루어져있으며 변동될수도 있습니다.</p>
+               <p class="part3info">안녕하세요. <br>
+               현재 사이트는 박철현의 포토폴리오로 제작된 사이트입니다. <br>
+               현재 사이트는 1920px 1080px 에 최적화 되어있으며,<br>
+               HTML,CSS,JAVASCRIPT를 사용하여 제작하였습니다.<br>
+               부족한점이 많지만 방문해주셔서 감사의 말씀을 드립니다.
+               </p>
+               <div class="part3shotcut1">
+               <a href="%EC%9D%B4%EB%A0%A5%EC%84%9C_20191119.pdf">
+               <p>이력서 보기</p>
+               </a>
+               </div>
                
-               <div class="part3shotcut1"><a href="#"> 바로가기 </a></div>
-               <div class="part3shotcut2"><a href="#"> 바로가기 </a></div>
+               
            </div>
        </div>
        
@@ -133,7 +144,7 @@
    <div class="part4">
       <p class= part4title>웹디자인 포토폴리오</p>
        <ul class="part4ul">
-           <li><img src="img/part4/1.jpg"></li>
+           <li></li>
            <li></li>
            <li></li>
        </ul>
@@ -162,6 +173,6 @@
             
         </ul>
    </div> <!-- 기타 -->
-    2019-11-20
+    2019-11-22
 </body>
 </html>
