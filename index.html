@@ -8,6 +8,67 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     
     <script>
+        
+        $(document).ready(function(){
+            
+             
+            
+            // .topbar 호버시 색변환
+            $(".topbar ul li p").mouseover(function(){
+               $(this).css({"color":"#ffd700","transition":"0.5s","border-bottom":"5px solid white"}); 
+            });
+            
+            $(".topbar ul li p").mouseleave(function(){
+               $(this).css({"color":"white","transition":"0.8s","border-bottom":"0px"}); 
+            });
+            
+            // .topbar 버튼 클릭시
+            
+            $(".part11,.btn1").click(function(){
+                   $("body,html").stop().animate({"scrollTop":"0"},1000);
+           });
+            
+            $(".part12,.btn2").click(function(){
+               $("body,html").stop().animate({"scrollTop":"850"},1000); 
+            });
+            
+            $(".part13,.btn3").click(function(){
+                $("body,html").stop().animate({"scrollTop":"1680"},1000);
+            })
+            
+            $(".part14,.btn4").click(function(){
+                $("body,html").stop().animate({"scrollTop":"2780"},1000)
+            })
+            
+            $(".part15,.btn5").click(function(){
+                $("body,html").stop().animate({"scrollTop":"3540"},1000)
+            })
+            
+           
+        });
+        
+         $(window).scroll(function(){ //버튼 스크롤 위치에 따라 색갈넣기 
+              src = $(window).scrollTop(); 
+               
+               if(src >= 1){
+                   $(".aside li:nth-child(1)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
+               if(src >= 850){
+                   $(".aside li:nth-child(2)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
+               if(src >= 1680){
+                   $(".aside li:nth-child(3)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
+               if(src >= 2780){
+                   $(".aside li:nth-child(4)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
+               
+               
+               
+               if(src >= 3540){
+                   $(".aside li:nth-child(5)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
+               
+           });
+                
+            
+            
+                          
  
     </script>
     
@@ -19,15 +80,19 @@
         body {background:url("img/background/computer-768608.png")no-repeat left; background-size:cover; background-attachment: fixed;}
         
         /* ----------------------------------- */
-        .topbar {position:fixed; top:0px; width:100%; height:100px; z-index:999;}
+        .topbar {position:absolute; top:0px; width:100%; height:100px; z-index:999;}
         .topbar ul {width:100%; height:100%;}
-        .topbar ul li {float:left; margin-left:50px;line-height:100px; font-size:20pt;}
+        .topbar ul li {float:left; margin-left:50px;line-height:100px; font-size:20pt; box-sizing: border-box;}
         .topbar ul li:nth-child(1) {margin-left:100px;}
+        .topbar ul li {box-sizing: border-box; cursor: pointer;}
+        
         /* ----------------------------------- */
-        .aside {position:fixed; width:50px; height:350px; border:1px solid white; right:1%; top:30%; z-index:999;}
+        .aside {position:fixed; width:50px; height:325px; background:rgba(0,0,0,0.5); right:1%; top:30%; z-index:999;}
         .aside ul li {width:15px; height:15px; border:2px solid white; border-radius:20px; margin:0 auto;}
         .aside ul li:nth-child(1) {margin-top:80px;}
-        .aside ul li {margin-top:15px;}
+        .aside ul li {margin-top:15px; transition:0.5s;background:transparent; cursor: pointer;}
+        .aside ul li:hover {border:5px solid white;}
+        
         /* ----------------------------------- */
         .part1 {width:100%; height:850px; position:relative;}
         .logo {width:600px; height:500px; position:absolute; background:url("img/part1/logo.png") no-repeat;; top:20%; left:13%;}
@@ -86,21 +151,21 @@
    
    <div class="topbar">
        <ul class="topbarul">
-           <li><a href="#">Home</a></li>
-           <li><a href="#">개요</a></li>
-           <li><a href="#">웹</a></li>
-           <li><a href="#">상세페이지</a></li>
-           <li><a href="#">디자인</a></li>
+           <li><p class="part11">Home</p></li>
+           <li><p class="part12">개요</p></li>
+           <li><p class="part13">웹</p></li>
+           <li><p class="part14">상세페이지</p></li>
+           <li><p class="part15">디자인</p></li>
        </ul>
    </div>
    
    <div class="aside">
        <ul>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
+           <li class="btn1"></li>
+           <li class="btn2"></li>
+           <li class="btn3"></li>
+           <li class="btn4"></li>
+           <li class="btn5"></li>
        </ul>
    </div>
    
@@ -173,6 +238,6 @@
             
         </ul>
    </div> <!-- 기타 -->
-    2019-11-22
+    2019-11-25 #ffd700 자바스크립트 추가 했고 컨텐츠관련작업해야댐
 </body>
 </html>
