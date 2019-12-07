@@ -116,7 +116,7 @@
         
         /* ----------------------------------- */
         .part4 {width:100%; height:1100px; background:url( img/part4/part4.png)no-repeat center bottom; background-size:cover; position:relative;}
-        .part4title {position:absolute; width:100%; text-align: center; height:150px;  font-size:55pt; font-weight: 500; line-height: 150px;}
+        .part4title {position:absolute; width:100%; text-align: center; height:150px;  font-size:55pt; font-weight: 500; line-height: 150px; }
         .part4ul {width:90%; height:100%;  margin:0 auto; }
         .part4ul li {width:500px; height:700px; float:left; margin-left:52px; margin-top:230px; border-radius: 10px; background:white;overflow:hidden;}
         .part4ul a:nth-child(1) li {background:url(img/part4/1.jpg)no-repeat center; background-size:cover;  }
@@ -124,22 +124,28 @@
         .part5 {width:100%; height:1200px; position:relative;}
         .part5title {position:absolute; width:100%; text-align:center; height:150px;  font-size:55pt; font-weight:500; line-height:150px; top:0px;}
         .part5ul {width:70%; height:900px;  margin:0px auto;   box-sizing: border-box; border:10px solid white; position:absolute; top:200px; left:300px;}
-        .part5ul li {width:400px; height:400px;  float:left; background:white;  box-shadow:255 255 10px; margin-left:10px; margin-top:10px;}
+        .part5ul li {width:400px; height:400px;  float:left; background:white;  box-shadow:255 255 10px; margin-left:10px; margin-top:10px; overflow:hidden; background:#232c34; }
         .part5ul li:nth-child(1) {margin-left:50px;}
         .part5ul li:nth-child(1),.part5ul li:nth-child(2),.part5ul li:nth-child(3) {margin-top:35px;}
         .part5ul li:nth-child(4) {margin-left:50px;}
         
+        
         .part5ul li:nth-child(1) img {width:400px; height:400px;}
         .part5ul li:nth-child(2) img {width:400px; height:400px;}
         .part5ul li:nth-child(3) img {width:100%; height:100%; }
+        .part5ul li img { transition:0.5s; opacity:0.5;}
+        .part5ul li:hover img {transform-origin : center center; transform:scale(1.1); opacity:1;}
         
         /* ----------------------------------- */
         .part6 {width:100%; height:510px; background:#171c25;}
         .part6title { width:100%; text-align:center; height:100px;  font-size:35pt; font-weight:500; line-height:100px; }
         .part6ul {width:80%; height:350px; margin:0 auto;  border-top:3px solid white; border-bottom:5px solid white;}
-        .part6ul li {float:left; width:400px; height:300px; background:white; margin-left:75px; margin-top:25px;}
-        .part6ul a:nth-child(1) li {background:url("img/part6/1.png")no-repeat center; background-size:cover;}
+        .part6ul li {float:left; width:400px; height:300px; background:white; margin-left:100px; margin-top:25px;}
+        
+        .part6ul a:nth-child(1) li {background:url("img/part6/1.png")no-repeat center; background-size:cover;margin-left:20%;}
         .part6ul a:nth-child(2) li {background:url("img/part6/2.jpg")no-repeat center; background-size:cover;}
+        .part6 h1 {text-align:center; line-height:300px; opacity:0; transition:0.5s; font-size:35pt; color:white;}
+        .part6ul a:hover h1 {opacity:1; }
         /* ----------------------------------- */
     </style>
     
@@ -195,7 +201,7 @@
                부족한점이 많지만 방문해주셔서 감사의 말씀을 드립니다.
                </p>
                <div class="part3shotcut1">
-               <a href="%EC%9D%B4%EB%A0%A5%EC%84%9C_20191119.pdf">
+               <a href="%EC%9D%B4%EB%A0%A5%EC%84%9C_20191119.pdf" target="_blank">
                <p>이력서 보기</p>
                </a>
                </div>
@@ -209,7 +215,7 @@
    <div class="part4">
       <p class= part4title>웹디자인 포토폴리오</p>
        <ul class="part4ul">
-           <a href="#"><li></li></a>
+           <a href="http://chtinepweb.dothome.co.kr/page1/index.html" target="_blank"><li></li></a>
            <li></li>
            <li></li>
        </ul>
@@ -232,12 +238,12 @@
            <p>기타 디자인</p>
        </div>
         <ul class="part6ul">
-            <a href="#"><li></li></a>
-            <a href="#"><li></li></a>
-            <a href="#"><li></li></a>
+            <a href="http://chtinepdesign.dothome.co.kr/1.html" target="_blank"><li><h1>그래픽</h1></li></a>
+            <a href="http://chtinepdesign.dothome.co.kr/2.html" target="_blank"><li><h1>팜플렛</h1></li></a>
+            
             
         </ul>
    </div> <!-- 기타 -->
-    2019-11-25 #ffd700 자바스크립트 추가 했고 컨텐츠관련작업해야댐
+    2019-12-07 #ffd700 컨텐츠관련작업해야댐
 </body>
 </html>
