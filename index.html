@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>박철현 포트폴리오111</title>
+    <title>박철현 포트폴리오</title>
     
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
@@ -33,18 +33,71 @@
             });
             
             $(".part13,.btn3").click(function(){
-                $("body,html").stop().animate({"scrollTop":"1680"},1000);
+                $("body,html").stop().animate({"scrollTop":"1630"},1000);
             })
             
             $(".part14,.btn4").click(function(){
-                $("body,html").stop().animate({"scrollTop":"2780"},1000)
+                $("body,html").stop().animate({"scrollTop":"2580"},1000)
             })
             
-            $(".part15,.btn5").click(function(){
-                $("body,html").stop().animate({"scrollTop":"3540"},1000)
-            })
             
+            
+            var p4l = 0;
+            var p4p = 0;
+            
+            $(".part4left").click(function(){
+                
+                p4p = p4p + 1 ;
+               
+                if(p4p > 0){
+                    p4p =-3;
+                };
+                
+                p4l = p4p * 1900;
+                
+                
+                
+               $(".part4in").animate({"left":p4l},500); 
+            });
+            
+            
+            
+            $(".part4right").click(function(){
+                
+                p4p = p4p - 1 ;
+                if(p4p < -3){
+                    p4p =0;
+                };
+                p4l = p4p * 1900;
+                
+                
+               $(".part4in").animate({"left":p4l},500); 
+            });
+            
+            $(".part4left").mouseover(function(){
+               $(this).stop().animate({"left":"25px"},300,function a (){
+                   $(this).stop().animate({"left":"15px"},300,function(){
+                      $(this).stop().animate({"left":"25px"},300,a);
+                   });
+               });
+            });
            
+            $(".part4left").mouseleave(function(){
+               $(this).stop().animate({"left":"20px"},200); 
+            });
+            
+            $(".part4right").mouseover(function(){
+               $(this).stop().animate({"right":"25px"},300,function b (){
+                   $(this).stop().animate({"right":"15px"},300,function(){
+                      $(this).stop().animate({"right":"25px"},300,b);
+                   });
+               });
+            });
+           
+            $(".part4right").mouseleave(function(){
+               $(this).stop().animate({"right":"20px"},200); 
+            });
+            
         });
         
          $(window).scroll(function(){ //버튼 스크롤 위치에 따라 색갈넣기 
@@ -54,15 +107,13 @@
                    $(".aside li:nth-child(1)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
                if(src >= 850){
                    $(".aside li:nth-child(2)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
-               if(src >= 1680){
+               if(src >= 1630){
                    $(".aside li:nth-child(3)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
-               if(src >= 2780){
+               if(src >= 2580){
                    $(".aside li:nth-child(4)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
                
                
                
-               if(src >= 3540){
-                   $(".aside li:nth-child(5)").stop().css({"background":"white"},100).siblings().css({"background":"transparent"},100)};
                
            });
                 
@@ -76,20 +127,20 @@
 
     <style>
         * {color:white; margin:0; padding:0; text-decoration:none; list-style:none; font-family: 'Noto Sans KR', sans-serif;}
-        body {width:100%; height:4200px;}
+        body {width:100%; height:3900px; overflow-x: hidden;}
         body {background:url("img/background/computer-768608.png")no-repeat left; background-size:cover; background-attachment: fixed;}
         
         /* ----------------------------------- */
         .topbar {position:absolute; top:0px; width:100%; height:100px; z-index:999;}
-        .topbar ul {width:100%; height:100%;}
-        .topbar ul li {float:left; margin-left:50px;line-height:100px; font-size:20pt; box-sizing: border-box;}
+        .topbar ul {width:100%; height:100%; margin-left:5%;}
+        .topbar ul li {float:left; margin-left:50px; margin-top :25px; line-height:50px; font-size:20pt; box-sizing: border-box;}
         .topbar ul li:nth-child(1) {margin-left:100px;}
         .topbar ul li {box-sizing: border-box; cursor: pointer;}
         
         /* ----------------------------------- */
-        .aside {position:fixed; width:50px; height:325px; background:rgba(0,0,0,0.5); right:1%; top:30%; z-index:999;}
+        .aside {position:fixed; width:50px; height:225px; ; right:0%; top:50%; margin-top:-112.5px; z-index:99999;}
         .aside ul li {width:15px; height:15px; border:2px solid white; border-radius:20px; margin:0 auto;}
-        .aside ul li:nth-child(1) {margin-top:80px;}
+        .aside ul li:nth-child(1) {margin-top:40px;}
         .aside ul li {margin-top:15px; transition:0.5s;background:transparent; cursor: pointer;}
         .aside ul li:hover {border:5px solid white;}
         
@@ -115,12 +166,65 @@
         
         
         /* ----------------------------------- */
-        .part4 {width:100%; height:1100px; background:url( img/part4/part4.png)no-repeat center bottom; background-size:cover; position:relative;}
+        .part4 {width:100%; height:900px; background:url( img/part4/part4.png)no-repeat center bottom; background-size:cover; position:relative;}
         .part4title {position:absolute; width:100%; text-align: center; height:150px;  font-size:55pt; font-weight: 500; line-height: 150px; }
-        .part4ul {width:90%; height:100%;  margin:0 auto; }
-        .part4ul li {width:500px; height:700px; float:left; margin-left:52px; margin-top:230px; border-radius: 10px; background:white;overflow:hidden;}
-        .part4ul a:nth-child(1) li {background:url(img/part4/1.jpg)no-repeat center; background-size:cover;  }
-        .part4ul a:nth-child(2) li {background:url(img/part4/2.jpg)no-repeat center center; background-size:cover;  }
+        .part4in {width:7600px; height:700px; position:relative; top:150px; left:0px;}
+        
+        .part4left {position:absolute;width:256px; height:256px; background:url(img/part4/left.png)no-repeat ;background-size:cover; top:54%;margin-top:-128px; z-index:9999; left:15px; cursor:pointer;}
+        .part4right {position:absolute;width:256px; height:256px; background:url(img/part4/right.png)no-repeat;background-size:cover; top:54%; margin-top:-128px; right:15px; z-index:9999; cursor:pointer;}
+        
+        .part4page2 {float:left;width:1900px; height:700px;  position:relative; background:rgba(12,12,12,0.3)}
+        
+        .part4page2img {position:absolute; width:600px; height:600px; border-radius:25px;box-shadow:1px 1px 10px black; background:url(img/part4/page2.jpg)no-repeat center; background-size:cover; left:17%; top:50%; margin-top:-300px;}
+        .part4page2txt {position:absolute; width:600px; height:400px;  right:15%; top:50%; margin-top:-250px;}
+        .part4page2txt h1:nth-child(1) {margin-top:40px;}
+        .part4page2txt h1 {margin-top:25px;}
+        .part4page2btn {position:absolute; width:300px; height:75px; border:3px solid white; background:rgba(255,255,255,0.2); right:23%; top:75%; text-align:center; line-height:75px; transition:0.5s;}
+        .part4page2btn:hover {border:3px solid rgba(255,255,255,0); background:rgba(255,255,255,0.5);}
+        
+        
+        .part4page3 {background:#222; float:left;width:1900px; height:700px; position:relative; background:rgba(12,12,12,0.3)}
+        .part4page3img {position:absolute; width:600px; height:600px; border-radius:25px;box-shadow:1px 1px 10px black; background:url(img/part4/page3.jpg)no-repeat center; background-size:cover; left:17%; top:50%; margin-top:-300px;}
+        .part4page3txt {position:absolute; width:600px; height:400px;  right:15%; top:50%; margin-top:-250px;}
+        .part4page3txt h1:nth-child(1) {margin-top:40px;}
+        .part4page3txt h1 {margin-top:25px;}
+        .part4page3btn {position:absolute; width:300px; height:75px; border:3px solid white; background:rgba(255,255,255,0.2); right:23%; top:75%; text-align:center; line-height:75px; transition:0.5s;}
+        .part4page3btn:hover {border:3px solid rgba(255,255,255,0); background:rgba(255,255,255,0.5);}
+        
+        
+        
+        .part4page1 {background:#333; float:left;width:1900px; height:700px; position:relative; background:rgba(12,12,12,0.3)}
+        .part4page1img {position:absolute; width:600px; height:600px; border-radius:25px;box-shadow:1px 1px 10px black; background:url(img/part4/page1.jpg)no-repeat center; background-size:cover; left:17%; top:50%; margin-top:-300px;}
+        .part4page1txt {position:absolute; width:600px; height:400px;  right:15%; top:50%; margin-top:-250px;}
+        .part4page1txt h1:nth-child(1) {margin-top:40px;}
+        .part4page1txt h1 {margin-top:25px;}
+        .part4page1btn {position:absolute; width:300px; height:75px; border:3px solid white; background:rgba(255,255,255,0.2); right:23%; top:75%; text-align:center; line-height:75px; transition:0.5s;}
+        .part4page1btn:hover {border:3px solid rgba(255,255,255,0); background:rgba(255,255,255,0.5);}
+        
+        
+        .part4page4 {background:#444; float:left;width:1900px; height:700px; position:relative; background:rgba(12,12,12,0.3)}
+        
+        .part4page4ul {width:45%; height:700px; margin:0 auto;position:relative;}
+        
+        .part4page4ul li {width:150px; height:150px;  position:absolute; transition:0.5s; border-radius:10px;}
+        .part4page4ul li:hover {transform:scale(1.2); box-shadow:1px 1px 5px black;}
+        
+        .part4page4ul li:nth-child(1),.part4page4ul li:nth-child(2),.part4page4ul li:nth-child(3) {top:25%; margin-top:-100px}
+        .part4page4ul li:nth-child(1) {left:25%; margin-left:-100px; background:url(img/part4/page2.jpg)no-repeat center; background-size:cover;}
+        .part4page4ul li:nth-child(2) {left:50%; margin-left:-75px; background:url(img/part4/page3.jpg)no-repeat center; background-size:cover;}
+        .part4page4ul li:nth-child(3) {left:75%; margin-left:-45px; background:url(img/part4/page1.jpg)no-repeat center; background-size:cover;}
+        
+        .part4page4ul li:nth-child(4),.part4page4ul li:nth-child(5),.part4page4ul li:nth-child(6) {top:50%; margin-top:-75px; }
+        .part4page4ul li:nth-child(4) {left:25%; margin-left:-100px;}
+        .part4page4ul li:nth-child(5) {left:50%; margin-left:-75px;}
+        .part4page4ul li:nth-child(6) {left:75%; margin-left:-45px;}
+        
+        .part4page4ul li:nth-child(7),.part4page4ul li:nth-child(8),.part4page4ul li:nth-child(9) {top:75%; margin-top:-45px;}
+        .part4page4ul li:nth-child(7) {left:25%; margin-left:-100px;}
+        .part4page4ul li:nth-child(8) {left:50%; margin-left:-75px;}
+        .part4page4ul li:nth-child(9) {left:75%; margin-left:-45px;}
+        
+        .part4page4ul li a div {width:100%; height:100%;}
         /* ----------------------------------- */
         .part5 {width:100%; height:1200px; position:relative;}
         .part5title {position:absolute; width:100%; text-align:center; height:150px;  font-size:55pt; font-weight:500; line-height:150px; top:0px;}
@@ -134,19 +238,14 @@
         .part5ul li:nth-child(1) img {width:400px; height:400px;}
         .part5ul li:nth-child(2) img {width:400px; height:400px;}
         .part5ul li:nth-child(3) img {width:100%; height:100%; }
+        .part5ul li:nth-child(4) img {width:400px; height:400px;}
         .part5ul li img { transition:0.5s; opacity:0.5;}
         .part5ul li:hover img {transform-origin : center center; transform:scale(1.1); opacity:1;}
         
         /* ----------------------------------- */
-        .part6 {width:100%; height:510px; background:#171c25;}
-        .part6title { width:100%; text-align:center; height:100px;  font-size:35pt; font-weight:500; line-height:100px; }
-        .part6ul {width:80%; height:350px; margin:0 auto;  border-top:3px solid white; border-bottom:5px solid white;}
-        .part6ul li {float:left; width:400px; height:300px; background:white; margin-left:100px; margin-top:25px;}
+        .part6 {width:100%; height:200px; background:#171c25;}
+        .part6 p {text-align: center;line-height: 200px; color:#333;}
         
-        .part6ul a:nth-child(1) li {background:url("img/part6/1.png")no-repeat center; background-size:cover;margin-left:20%;}
-        .part6ul a:nth-child(2) li {background:url("img/part6/2.jpg")no-repeat center; background-size:cover;}
-        .part6 h1 {text-align:center; line-height:300px; opacity:0; transition:0.5s; font-size:35pt; color:white;}
-        .part6ul a:hover h1 {opacity:1; }
         /* ----------------------------------- */
     </style>
     
@@ -161,8 +260,8 @@
            <li><p class="part11">Home</p></li>
            <li><p class="part12">개요</p></li>
            <li><p class="part13">웹</p></li>
-           <li><p class="part14">상세페이지</p></li>
-           <li><p class="part15">디자인</p></li>
+           <li><p class="part14">상세</p></li>
+           
        </ul>
    </div>
    
@@ -172,7 +271,7 @@
            <li class="btn2"></li>
            <li class="btn3"></li>
            <li class="btn4"></li>
-           <li class="btn5"></li>
+           
        </ul>
    </div>
    
@@ -180,7 +279,7 @@
        <div class="logo"></div>
        <div class="part1text">
            <h3 class="part1text1">환영합니다.</h3>
-           <h3 class="part1text2">박철현의 포토폴리오입니다.</h3>
+           <h3 class="part1text2">박철현의 포트폴리오입니다.</h3>
        </div>
    </div> <!-- 첫번째 -->
    
@@ -196,10 +295,10 @@
                <h1 class="part3name">박철현</h1>
                
                <p class="part3info">안녕하세요. <br>
-               현재 사이트는 박철현의 포토폴리오로 제작된 사이트입니다. <br>
+               현재 사이트는 박철현의 포트폴리오로 제작된 사이트입니다. <br>
                현재 사이트는 1920px 1080px 에 최적화 되어있으며,<br>
                HTML,CSS,JAVASCRIPT를 사용하여 제작하였습니다.<br>
-               부족한점이 많지만 방문해주셔서 감사의 말씀을 드립니다.
+               포트폴리오에 방문해주셔서 감사의 말씀을 드립니다.
                </p>
                <div class="part3shotcut1">
                <a href="%EC%9D%B4%EB%A0%A5%EC%84%9C_20191119.pdf" target="_blank">
@@ -214,37 +313,79 @@
    </div> <!-- 개요 -->
    
    <div class="part4">
-      <p class= part4title>웹디자인 포토폴리오</p>
-       <ul class="part4ul">
-           <a href="http://chtinepweb.dothome.co.kr/page1/index.html" target="_blank"><li></li></a>
-           <a href="http://chtinepweb.dothome.co.kr/page2/index.html" target="_blank"><li></li></a>
-           <li></li>
-       </ul>
+      <p class= part4title>웹디자인</p>
+      <div class="part4left"></div>
+         <div class="part4right"></div>
+      <div class="part4in">
+         
+         
+         
+          <div class="part4page2">
+              <div class="part4page2img"></div>
+              <div class="part4page2txt">
+                  <h1>타이틀 <br>- 고프로8 웹사이트</h1>
+                  <h1>컨셉 <br>- CSS/제이쿼리 사용으로 사용자의 반응에 <br>애니메이션 실행을 목적으로 설계.</h1>
+                  
+                  
+              </div>
+              <div class="part4page2btn">
+                  <a href="http://chtinepweb.dothome.co.kr/page2/index.html" target="_blank"><h1>홈페이지 이동</h1></a>
+              </div>
+          </div>
+          <div class="part4page3">
+              <div class="part4page3img"></div>
+              <div class="part4page3txt">
+                  <h1>타이틀 <br>- 노트북 사전예약 사이트</h1>
+                  <h1>컨셉 <br>- CSS/제이쿼리 사용으로 스크롤에 따라<br>반응하는 사이트를 컨셉으로잡고 설계.</h1>
+              </div>
+              <div class="part4page3btn">
+                  <a href="http://chtinepweb.dothome.co.kr/page3/index.html" target="_blank"><h1>홈페이지 이동</h1></a>
+              </div>
+          </div>
+          <div class="part4page1">
+              <div class="part4page1img"></div>
+              <div class="part4page1txt">
+                  <h1>타이틀 <br>- 대만 여행 정보 사이트</h1>
+                  <h1>컨셉 <br>- CSS/제이쿼리 사용으로 스크롤에 따라<br>팝업이나 애니메이션 기능시연용으로 제작.</h1>
+              </div>
+              <div class="part4page1btn">
+                  <a href="http://chtinepweb.dothome.co.kr/page1/index.html" target="_blank"><h1>홈페이지 이동</h1></a>
+              </div>
+          </div>
+          
+          
+          <div class="part4page4">
+              <ul class="part4page4ul">
+                  <li><a href="http://chtinepweb.dothome.co.kr/page2/index.html" target="_blank"><div></div></a></li>
+                  <li><a href="http://chtinepweb.dothome.co.kr/page3/index.html" target="_blank"><div></div></a></li>
+                  <li><a href="http://chtinepweb.dothome.co.kr/page1/index.html" target="_blank"><div></div></a></li>
+                  <li><a><div></div></a></li>
+                  <li><a><div></div></a></li>
+                  <li><a><div></div></a></li>
+                  <li><a><div></div></a></li>
+                  <li><a><div></div></a></li>
+                  <li><a><div></div></a></li>
+              </ul>
+          </div>
+      </div>
+       
    </div> <!-- 웹 포폴 -->
    
    <div class="part5">
-       <p class="part5title">상세페이지 디자인 포토폴리오</p>
+       <p class="part5title">상세 디자인</p>
        <ul class="part5ul">
            <li><a href="http://chtinepdetail.dothome.co.kr/page1.html" target="_blank"><img src="img/part5/1.png"></a></li>
            <li><a href="http://chtinepdetail.dothome.co.kr/page2.html" target="_blank"><img src="img/part5/2.png"></a></li>
            <li><a href="http://chtinepdetail.dothome.co.kr/page3.html" target="_blank"><img src="img/part5/3.png"></a></li>
-           <li></li>
+           <li><a href="http://chtinepdetail.dothome.co.kr/page4.html" target="_blank"><img src="img/part5/4.png"></a></li>
            <li></li>
            <li></li>
        </ul>
    </div> <!-- 상세페이지 포폴 -->
    
    <div class="part6">
-       <div class="part6title">
-           <p>기타 디자인</p>
-       </div>
-        <ul class="part6ul">
-            <a href="http://chtinepdesign.dothome.co.kr/1.html" target="_blank"><li><h1>그래픽</h1></li></a>
-            <a href="http://chtinepdesign.dothome.co.kr/2.html" target="_blank"><li><h1>팜플렛</h1></li></a>
-            
-            
-        </ul>
+       <p>|박철현의|포트폴리오|사이트|입니다.|</p>
    </div> <!-- 기타 -->
-    2019-12-07 #ffd700 컨텐츠관련작업해야댐
+    
 </body>
 </html>
